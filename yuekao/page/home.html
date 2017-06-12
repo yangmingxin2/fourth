@@ -1,0 +1,72 @@
+<style>
+    .continer{
+        width: 75%;
+        height: auto;
+        border: 1px solid brown;
+        margin: 20px auto;
+    }
+    .head{
+        position: relative;
+        height: 60px;
+        line-height: 60px;
+        border-bottom: 1px solid sandybrown;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .right{
+        position: absolute;
+        right: 15px;
+        top: -10px;
+    }
+    .right>i{
+        padding-right: 15px;
+    }
+    .content{
+        padding-left: 15px;
+        padding-right: 15px;
+        color: saddlebrown;;
+    }
+    .box{
+        position: absolute;
+        right: 25px;
+        top: 50px;
+        width: 150px;
+        height: 70px;
+        border: 1px solid #ccc;
+        background: #fff;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .box>p{
+        line-height: 35px;
+        height: 35px;
+        margin-top: -5px;
+    }
+    .bg{
+        color: #c7254e;
+    }
+    .old{
+        color: #9a9595;
+    }
+</style>
+<div class="continer">
+    <div class="head">
+        Headings
+        <p class="right">
+            <i class="fa fa-angle-down" ng-click="tab(txt)"></i>
+            <i class="fa fa-search" ng-click="toggle()"></i>
+            <i class="fa fa-remove" ng-click="remove(show)"></i>
+        </p>
+        <div class="box" ng-show="visible">
+            <p class="pp" ng-repeat="x in arr" ng-click="tab(x)" ng-class="{'bg':x.bg}">{{x}}</p>
+        </div>
+    </div>
+    <div class="content" ng-if="show"  ng-show="txt">
+        <h1>Headings 1 yangmingxin</h1>
+        <h2>Headings 2 yangmingxin</h2>
+        <h3>Headings 3 yangmingxin</h3>
+        <h4>Headings 4 yangmingxin</h4>
+        <h5>Headings 5 yangmingxin</h5>
+        <h6>Headings 6 yangmingxin</h6>
+    </div>
+</div>
